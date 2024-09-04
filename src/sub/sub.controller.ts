@@ -26,6 +26,7 @@ export class SubController {
     }
     @Patch(':id')
     updateSub(@Param('id') id:number,@Body() updateSub:CreateSubDto) {
+        console.log('test123333')
         this.subService.update(id, updateSub);
     }
     @Delete(':id')

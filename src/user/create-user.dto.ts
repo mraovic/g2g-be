@@ -11,4 +11,6 @@ export class CreateUserDto {
     @IsNotEmpty()
     @MinLength(6)
     pass:string;
+    @IsNotEmpty()
+    roles:string;
 }

@@ -28,6 +28,8 @@ export class User {
     created_at: Date;
     @UpdateDateColumn()
     updated_at: Date;
+    @Column()
+    roles:string;
 
     @OneToMany(()=>ArticleEntity, (articleEntity: ArticleEntity)=>articleEntity.user)
     articles:ArticleEntity[];

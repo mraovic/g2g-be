@@ -10,10 +10,10 @@ export class RacunService {
         private readonly racunRepository: Repository<Racun>,
     ) {}
 
-    async create(createRacunDto: any): Promise<Racun> {
-        // Create a new Racun instance
+    async create(createRacunDto: Racun): Promise<Racun> {
         const racun = this.racunRepository.create(createRacunDto);
-        // Save to the database and return the saved Racun
+        console.log('test');
         return this.racunRepository.save(racun);
     }
+
 }

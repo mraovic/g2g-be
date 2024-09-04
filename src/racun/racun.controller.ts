@@ -7,6 +7,7 @@ export class RacunController {
 
     @Post()
     async create(@Body() createRacunDto: any) {
+        console.log('test')
         return this.racunService.create(createRacunDto);
     }
 }
